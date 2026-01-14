@@ -30,6 +30,7 @@ INSTALLED_APPS = [
 
     # MY APPS
     'apps.users.apps.UsersConfig',
+    'apps.tasks.apps.TasksConfig',
 ]
 
 REST_FRAMEWORK = {
