@@ -3,11 +3,15 @@ from .models import Task
 from .serializers import TaskSerializer, TaskChangeStatusSerializer
 from rest_framework.permissions import IsAuthenticated
 from .permissions import IsOwner
+from .filters import TaskFilter
+from django_filters.rest_framework.backends import DjangoFilterBackend
 
 
 class TaskListCreateAPIView(ListCreateAPIView):
     serializer_class = TaskSerializer
     permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend]
+    filterset_class = TaskFilter
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
