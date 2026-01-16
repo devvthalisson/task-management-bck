@@ -45,5 +45,41 @@ This project was created for **educational purposes**, as part of a recurring ba
 
 ### Clone the repository
 ```bash
-git clone 
+git clone https://github.com/devvthalisson/task-management-bck.git
+cd task-management-bck
 ```
+
+### Create a virtual environment
+```bash
+python -m venv .venv
+source .venv/bin/activate # Linux / MAC
+.venv\Scripts\activate
+```
+
+### Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### Run migrations
+```bash
+python manage.py migrate
+```
+
+### Start the server
+```bash
+python manage.py runserver
+```
+
+---
+
+## Testing
+
+Manual tests performed using:
+- Postman
+- Insomnia
+(Automated tests can be added in future iterations.)
+
+## Author
+Developed by Thalisson Menezes
+Back-end focused studies with Django, REST APIs and clean architecture.
