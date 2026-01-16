@@ -15,6 +15,7 @@ This project was created for **educational purposes**, as part of a recurring ba
 - SQLite (development environment)
 - Django Silk
 - Django Filter
+- Django Spectacular
 
 ---
 
