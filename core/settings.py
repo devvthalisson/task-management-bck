@@ -32,6 +32,9 @@ INSTALLED_APPS = [
     # MY APPS
     'apps.users.apps.UsersConfig',
     'apps.tasks.apps.TasksConfig',
+
+    # SCHEMA
+    'drf_spectacular',
 ]
 
 REST_FRAMEWORK = {
@@ -41,6 +44,14 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
     'MAX_PAGE_SIZE': 50,
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Task management API',
+    'DESCRIPTION': 'Backend built with Python+DRF for task management with JWT-based authentication.',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
 }
 
 SIMPLE_JWT = {
