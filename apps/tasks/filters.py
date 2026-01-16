@@ -16,5 +16,5 @@ class TaskFilter(django_filters.FilterSet):
     def filter_recents(self, queryset, name, value):
         today = timezone.now().date()
         if value:
-            return queryset.filter(created_at__gte=today)
+            return queryset.filter(created_at__date__gte=today)
         return queryset

@@ -5,6 +5,7 @@ from rest_framework.permissions import IsAuthenticated
 from .permissions import IsOwner
 from .filters import TaskFilter
 from django_filters.rest_framework.backends import DjangoFilterBackend
+from .paginations import TaskResultsSetPagination
 
 
 class TaskListCreateAPIView(ListCreateAPIView):
@@ -12,12 +13,13 @@ class TaskListCreateAPIView(ListCreateAPIView):
     permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend]
     filterset_class = TaskFilter
+    pagination_class = TaskResultsSetPagination
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
     
     def get_queryset(self):
-        return Task.objects.filter(owner=self.request.user)
+        return Task.objects.filter(owner=self.request.user).order_by('-updated_at')
 
 class TaskChangeStatus(UpdateAPIView):
     serializer_class = TaskChangeStatusSerializer
