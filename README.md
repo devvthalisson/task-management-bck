@@ -76,6 +76,12 @@ python manage.py runserver
 
 ## Routes
 
+### Schema
+api/schema/swagger-ui/
+
+### Overview Queries
+api/silk-status/
+
 ### Auth
 <img width="1292" height="487" alt="image" src="https://github.com/user-attachments/assets/64537071-19c5-4404-b50a-8851ee4b8c97" />
 
