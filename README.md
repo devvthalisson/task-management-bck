@@ -73,6 +73,16 @@ python manage.py runserver
 
 ---
 
+## Routes
+
+### Auth
+<img width="1292" height="487" alt="image" src="https://github.com/user-attachments/assets/64537071-19c5-4404-b50a-8851ee4b8c97" />
+
+### Tasks
+<img width="1292" height="432" alt="image" src="https://github.com/user-attachments/assets/0bc7a2a6-313b-49f2-b6d4-33c29ad0f7b6" />
+
+---
+
 ## Testing
 
 Manual tests performed using:
